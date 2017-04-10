@@ -3,6 +3,14 @@
 		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-    <session-factory>
-    </session-factory>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+		<property name="hibernate.connection.username">ullasdb</property>
+		<property name="hibernate.connection.password">ullasdb</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.connection.pool_size">10</property>
+		<property name="hibernate.cache.use_query_cache">true</property>
+		<property name="hibernate.show_sql">true</property>
+	</session-factory>
 </hibernate-configuration>
